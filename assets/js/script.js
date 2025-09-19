@@ -151,3 +151,107 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// Modal functionality
+function openModal(project) {
+    const modal = document.getElementById("projectModal");
+    const title = document.getElementById("projectTitle");
+    const description = document.getElementById("projectDescription");
+    const technologies = document.getElementById("projectTechnologies");
+    const features = document.getElementById("projectFeatures");
+
+    // Clear previous content
+    technologies.innerHTML = '';
+    features.innerHTML = '';
+
+    // Set project details based on which project was clicked
+    if (project === 'spccManagement') {
+        title.textContent = "Management System Of SPCC";
+        description.textContent = "A web-based management system to streamline operations at SPCC. The system helps manage records and processes efficiently.";
+        
+        const techList = ["HTML", "CSS", "JavaScript", "PHP", "MySQL"];
+        techList.forEach(tech => {
+            let li = document.createElement('li');
+            li.textContent = tech;
+            technologies.appendChild(li);
+        });
+
+        const featureList = ["Record management", "User authentication", "Dashboard overview", "Real-time data updates", "Reports & Statistics", "User Role Management", "Responsive Design"];
+        featureList.forEach(feature => {
+            let li = document.createElement('li');
+            li.textContent = feature;
+            features.appendChild(li);
+        });
+    } 
+    else if (project === 'spccWebsite') {
+        title.textContent = "SPCC Website";
+        description.textContent = "A website for SPCC that provides information about the institution and its programs.";
+        
+        const techList = ["HTML", "CSS", "JavaScript", "Codeigniter 3"];
+        techList.forEach(tech => {
+            let li = document.createElement('li');
+            li.textContent = tech;
+            technologies.appendChild(li);
+        });
+
+        const featureList = ["Responsive design", "Customizable sections", "Information display"];
+        featureList.forEach(feature => {
+            let li = document.createElement('li');
+            li.textContent = feature;
+            features.appendChild(li);
+        });
+    }
+    else if (project === 'accountingSystem') {
+        title.textContent = "Accounting System Of SPCC";
+        description.textContent = "A web-based accounting system to manage finances at SPCC.";
+        
+        const techList = ["HTML", "CSS", "JavaScript", "Codeigniter 3", "MySQL", "PHP"];
+        techList.forEach(tech => {
+            let li = document.createElement('li');
+            li.textContent = tech;
+            technologies.appendChild(li);
+        });
+
+        const featureList = ["Income and Expense tracking", "Automatic reports", "User role management", "Secure transactions"];
+        featureList.forEach(feature => {
+            let li = document.createElement('li');
+            li.textContent = feature;
+            features.appendChild(li);
+        });
+    } 
+    else if (project === 'tlmcWebsite') {
+        title.textContent = "TLMC Website";
+        description.textContent = "A modern website for small clinic offering product information and online services.";
+        
+        const techList = ["HTML", "CSS", "JavaScript", "Codeigniter 3", "PHP", "MySQL"];
+        techList.forEach(tech => {
+            let li = document.createElement('li');
+            li.textContent = tech;
+            technologies.appendChild(li);
+        });
+
+        const featureList = ["Product showcase", "Client portal", "Product search", "CMS"];
+        featureList.forEach(feature => {
+            let li = document.createElement('li');
+            li.textContent = feature;
+            features.appendChild(li);
+        });
+    }
+
+    // Show the modal
+    modal.style.display = "block";
+}
+
+// Close modal
+function closeModal() {
+    const modal = document.getElementById("projectModal");
+    modal.style.display = "none";
+}
+
+// Close modal if user clicks outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById("projectModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}

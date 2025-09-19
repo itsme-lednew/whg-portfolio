@@ -360,6 +360,26 @@
 
             <li class="timeline-item">
 
+              <h4 class="h4 timeline-item-title">Part-time Instructor</h4>
+
+              <span>2023</span>
+
+              <p class="timeline-text">
+                Deliver engaging, well-structured lectures and class sessions based on course objectives and syllabus.
+              </p>
+
+              <p class="timeline-text">
+                Create and administer assessments such as quizzes, exams, and assignments.
+              </p>
+
+              <p class="timeline-text">
+                Update course content to ensure relevance and alignment with current industry standards or academic advancements.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
               <h4 class="h4 timeline-item-title">NCA Personnel</h4>
 
               <span>2017 — 2019</span>
@@ -378,26 +398,6 @@
 
               <p class="timeline-text">
                 Set up and configure routers, switches, access points, and firewalls.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Part-time Instructor</h4>
-
-              <span>2023</span>
-
-              <p class="timeline-text">
-                Deliver engaging, well-structured lectures and class sessions based on course objectives and syllabus.
-              </p>
-
-              <p class="timeline-text">
-                Create and administer assessments such as quizzes, exams, and assignments.
-              </p>
-
-              <p class="timeline-text">
-                Update course content to ensure relevance and alignment with current industry standards or academic advancements.
               </p>
 
             </li>
@@ -592,7 +592,7 @@
           <ul class="project-list">
 
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+              <a href="#" onclick="openModal('spccManagement')">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -610,7 +610,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+              <a href="#" onclick="openModal('spccWebsite')">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -628,7 +628,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+              <a href="#" onclick="openModal('accountingSystem')">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -646,7 +646,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+              <a href="#" onclick="openModal('tlmcWebsite')">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -714,7 +714,26 @@
 
   </main>
 
-
+  <!-- Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="projectTitle">Project Title</h2>
+        <p id="projectDescription">Project description goes here.</p>
+        <h3>Technologies Used:</h3>
+        <ul id="projectTechnologies">
+            <li>Technology 1</li>
+            <li>Technology 2</li>
+            <li>Technology 3</li>
+        </ul>
+        <h3>Project Features:</h3>
+        <ul id="projectFeatures">
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+        </ul>
+    </div>
+  </div>
 
 
 
