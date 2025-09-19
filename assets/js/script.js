@@ -230,7 +230,7 @@ function openModal(project) {
             technologies.appendChild(li);
         });
 
-        const featureList = ["Product showcase", "Client portal", "Product search", "CMS"];
+        const featureList = ["Product showcase", "Client portal", "Product search", "CMS", "User role management"];
         featureList.forEach(feature => {
             let li = document.createElement('li');
             li.textContent = feature;
